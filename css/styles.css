@@ -1,0 +1,273 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --background-color: #f1f5f9;
+    --text-color: #1e293b;
+    --card-background: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.logo a:hover {
+    opacity: 0.9;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Balance card styles */
+.balance-card {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.amount {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: var(--primary-color);
+}
+
+.card-actions {
+    display: flex;
+    gap: 15px;
+}
+
+/* Button styles */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: var(--text-color);
+}
+
+.btn-secondary:hover {
+    background-color: #cbd5e1;
+}
+
+/* Transactions section */
+.transactions {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.transaction-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.transaction-amount {
+    font-weight: bold;
+}
+
+.transaction-amount.positive {
+    color: #10b981;
+}
+
+.transaction-amount.negative {
+    color: #ef4444;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.analytics {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.chart-container canvas {
+    width: 100%;
+    height: 300px;
+    background: var(--card-background);
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    padding: 10px;
+}
+
+/* Account info styles */
+.card {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.account-info {
+    margin-top: 20px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.info-row .label {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.info-row .value {
+    color: var(--primary-color);
+}
+
+/* History list styles */
+.history-list {
+    max-height: 400px;
+    overflow-y: auto;
+    margin: 20px 0;
+}
+
+/* Profile form styles */
+#profileForm {
+    max-width: 600px;
+}
+
+#profileForm .form-group {
+    margin-bottom: 20px;
+}
+
+#profileForm select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Active nav link */
+.nav-links a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+} 
