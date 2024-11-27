@@ -56,14 +56,36 @@
     }
 
     /* Analytics Section */
-    .chart-container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    .analytics {
+        padding: 1rem;
+        margin: 1rem 0;
     }
 
-    canvas {
-        max-width: 100%;
-        height: auto;
+    .chart-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem 0;
+    }
+
+    .chart-container canvas {
+        width: 100% !important;
+        height: 300px !important;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Add container for each chart for better organization */
+    .chart-wrapper {
+        background: #ffffff;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .chart-wrapper h3 {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        color: #333;
     }
 
     /* Forms */
@@ -99,6 +121,15 @@
     }
 
     .chart-container {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .chart-wrapper {
+        background: #ffffff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 } 
