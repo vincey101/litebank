@@ -270,4 +270,9 @@ body {
 .nav-links a.active {
     color: var(--primary-color);
     font-weight: 600;
+}
+
+/* Add this to your existing styles */
+.mobile-menu-btn {
+    display: none;  /* Hide by default on desktop */
 } 
